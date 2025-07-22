@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Textos</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Comparador de Textos</h1>
+            <p>Compara dos textos y visualiza las similitudes y diferencias</p>
+        </div>
+        
+        <div class="content">
+            <div class="text-areas">
+                <div class="text-section">
+                    <h3>Texto 1</h3>
+                    <textarea id="text1" class="text-input" placeholder="Ingresa aquí el primer texto para comparar..."></textarea>
+                </div>
+                
+                <div class="text-section">
+                    <h3>Texto 2</h3>
+                    <textarea id="text2" class="text-input" placeholder="Ingresa aquí el segundo texto para comparar..."></textarea>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" onclick="compareTexts()">Comparar Textos</button>
+                <button class="btn btn-secondary" onclick="clearAll()">Limpiar Todo</button>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color legend-common"></div>
+                    <span>Texto Común</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-diff"></div>
+                    <span>Diferencias</span>
+                </div>
+            </div>
+            
+            <div class="text-areas">
+                <div class="text-section">
+                    <h3>Resultado Texto 1</h3>
+                    <div id="result1" class="text-output"></div>
+                </div>
+                
+                <div class="text-section">
+                    <h3>Resultado Texto 2</h3>
+                    <div id="result2" class="text-output"></div>
+                </div>
+            </div>
+
+            <div id="stats" class="stats" style="display: none;">
+                <h4>Estadísticas de Comparación</h4>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="commonWords">0</div>
+                        <div class="stat-label">Palabras Comunes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="diffWords">0</div>
+                        <div class="stat-label">Palabras Diferentes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="similarity">0%</div>
+                        <div class="stat-label">Similitud</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
